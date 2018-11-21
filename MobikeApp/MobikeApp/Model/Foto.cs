@@ -15,7 +15,7 @@ namespace MobikeApp.Model
         public string NomeImagemPequena;
 
         [JsonProperty("imagemGrande")]
-        public Uri ImagemGrande;
+        public string ImagemGrande;
 
         [JsonProperty("nomeImagemGrande")]
         public string NomeImagemGrande;

@@ -14,11 +14,10 @@ namespace MobikeApp.ViewModel
         public ProdutosDetailsViewModel()
         {
 
-          //  OpenMapCommand = new Command(async () => await OpenMapAsync()); 
+            //  OpenMapCommand = new Command(async () => await OpenMapAsync()); 
         }
 
-        public ProdutosDetailsViewModel(Produto monkey) 
-            : this()
+        public ProdutosDetailsViewModel(Produto monkey) : this()
         {
             Produto = monkey;
             Title = $"{Produto.Nome} Details";

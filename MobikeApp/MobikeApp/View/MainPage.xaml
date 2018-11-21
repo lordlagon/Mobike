@@ -32,21 +32,21 @@
                     <ViewCell>
                         <Grid ColumnSpacing="10" Padding="10">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="100"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <circle:CircleImage Source="{Binding Image}"
+                            <circle:CircleImage Source="{Binding Fotos}"
                                     HorizontalOptions="Center"
                                     VerticalOptions="Center"
                                     BorderColor="{StaticResource PrimaryDark}"
                                     BorderThickness="3"
-                                   WidthRequest="60"
-                                   HeightRequest="60"
+                                   WidthRequest="100"
+                                   HeightRequest="100"
                                    Aspect="AspectFill"/>
                             <StackLayout Grid.Column="1"
                                          VerticalOptions="Center">
-                                <Label Text="{Binding Name}"/>
-                                <Label Text="{Binding Location}"/>
+                                <Label Text="{Binding Nome}"/>
+                                <Label Text="{Binding PrecoVenda}"/>
                             </StackLayout>
                         </Grid>
                     </ViewCell>
@@ -54,7 +54,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button Text="Search" 
+        <Button Text="Buscar" 
                 Command="{Binding GetProdutosCommand}"
                 IsEnabled="{Binding IsNotBusy}"
                 Grid.Row="1"

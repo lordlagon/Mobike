@@ -12,7 +12,12 @@ namespace MobikeApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+
+            MainPage = new NavigationPage(new MainPage())
+            {
+                BarBackgroundColor = (Color)Resources["Primary"],
+                BarTextColor = Color.White
+            };
         }
 
         protected override void OnStart()
