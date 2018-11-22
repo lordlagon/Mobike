@@ -9,7 +9,8 @@ namespace MobikeApp.ViewModel
 {
     public class ProdutosDetailsViewModel : BaseViewModel
     {
-        public Command OpenMapCommand { get; }
+        public Command AddCarrinhoCommand { get; }
+       
 
         public ProdutosDetailsViewModel()
         {
@@ -17,21 +18,35 @@ namespace MobikeApp.ViewModel
             //  OpenMapCommand = new Command(async () => await OpenMapAsync()); 
         }
 
-        public ProdutosDetailsViewModel(Produto monkey) : this()
+        public ProdutosDetailsViewModel(Produto produto) : this()
         {
-            Produto = monkey;
-            Title = $"{Produto.Nome} Details";
+            Produto = produto;
+            Title = $"Detalhes {Produto.Nome} ";
+            Detalhes = $"Modelo: {Produto.Classe} /n Cor: {Produto.Cor} ";
         }
-        Produto monkey;
+        private Produto _produto;
         public Produto Produto
         {
-            get => monkey;
+            get => _produto;
             set
             {
-                if (monkey == value)
+                if (_produto == value)
                     return;
 
-                monkey = value;
+                _produto = value;
+                OnPropertyChanged();
+            }
+        }
+        private string _detalhes;
+        public string Detalhes
+        {
+            get => _detalhes;
+            set
+            {
+                if (_detalhes == value)
+                    return;
+
+                _detalhes = value;
                 OnPropertyChanged();
             }
         }
