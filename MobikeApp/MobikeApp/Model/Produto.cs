@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -46,7 +47,8 @@ namespace MobikeApp.Model
         [JsonProperty("dataModificacao")]
         public object DataModificacao { get; set; }
         [JsonProperty("fotos")]
-        public Foto[] Fotos { get; set; }
+        public List<Foto> Fotos { get; set; }
+        public Uri Imagem { get; set; }
         [JsonProperty("revisaos")]
         public object[] Revisaos { get; set; }
         [JsonProperty("produtoSubCategorias")]
@@ -59,6 +61,8 @@ namespace MobikeApp.Model
         public object UnidadeMedida { get; set; }
         [JsonProperty("cor")]
         public object Cor { get; set; }
+
+        
     }
 
     public partial class Produto

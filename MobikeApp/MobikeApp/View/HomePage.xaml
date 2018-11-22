@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobikeApp.View.HomePage"
+             Title="Adventure Works">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Label Text="Mobike - Adventure Works" TextColor="Blue"
+                   FontAttributes="Bold" HorizontalOptions="Center"
+                   FontSize="Large"/>
+            <Image Source="bike.png" Aspect="AspectFit"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

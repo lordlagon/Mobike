@@ -17,8 +17,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="View\CarrinhoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\DetailsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

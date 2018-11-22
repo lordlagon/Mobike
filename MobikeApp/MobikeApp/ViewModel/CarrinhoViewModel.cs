@@ -11,16 +11,17 @@ using MobikeApp.Mock;
 
 namespace MobikeApp.ViewModel
 {
-    public class ProdutosViewModel : BaseViewModel
+    public class CarrinhoViewModel : BaseViewModel
     {
         public ObservableCollection<Produto> Produtos { get; }
+        public string ValorTotal { get; set; }
         public Command GetProdutosCommand { get; }
-        public Command GetClosestCommand { get; }
-        public ProdutosViewModel()
+       
+        public CarrinhoViewModel()
         {
-            Title = "Lista de Produtos";
+            Title = "Carrinho";
             Produtos = new ObservableCollection<Produto>();
-            GetProdutosCommand = new Command(async () => await GetProdutosAsync());
+           // GetProdutosCommand = new Command(async () => await GetProdutosAsync());
             
         }
 

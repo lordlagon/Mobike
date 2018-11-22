@@ -9,21 +9,22 @@ namespace MobikeApp.Model
         public long FotoId { get; set; }
 
         [JsonProperty("imagemPequena")]
-        public string ImagemPequena;
+        public Uri ImagemPequena { get; set; }
 
         [JsonProperty("nomeImagemPequena")]
-        public string NomeImagemPequena;
+        public string NomeImagemPequena { get; set; }
 
         [JsonProperty("imagemGrande")]
-        public string ImagemGrande;
+        public string ImagemGrande { get; set; }
 
         [JsonProperty("nomeImagemGrande")]
-        public string NomeImagemGrande;
+        public string NomeImagemGrande { get; set; }
 
         [JsonProperty("principal")]
-        public bool Principal;
+        public bool Principal { get; set; }
 
         [JsonProperty("dataModificacao")]
-        public object DataModificacao;
+        public object DataModificacao { get; set; }
+
     }
 }

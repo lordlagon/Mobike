@@ -1,17 +1,22 @@
 ﻿using MobikeApp.Model;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace MobikeApp.View
 {
-    public partial class MainPage : ContentPage
-    {
-        
-        public MainPage()
-        {
-            InitializeComponent();
-        }
-             
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class CarrinhoPage : ContentPage
+	{
+		public CarrinhoPage ()
+		{
+			InitializeComponent ();
+		}
 
         async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
